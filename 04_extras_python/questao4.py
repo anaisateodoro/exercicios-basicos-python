@@ -1,39 +1,44 @@
 """
-3) Escreva um script que pergunta ao usuário se ele deseja converter
-uma temperatura de grau Celsius para Fahrenheit ou vice-versa. Para
-cada opção, crie uma função.
-Plus: Crie uma terceira, que é um menu para o usuário escolher a opção
-desejada, onde esse menu chama a função de conversão correta.
+Crie um programa que leia quanto dinheiro uma pessoa tem na carteira, e calcule quanto poderia comprar de cada moeda estrangeira.
+Considere a tabela de conversão abaixo:
+Dólar Americano: R$ 4,91
+Peso Argentino: R$ 0,02
+Dólar Australiano: R$ 3,18
+Dólar Canadense: R$ 3,64
+Franco Suiço: R$ 0,42
+Euro: R$ 5,36
+Libra esterlina: R$ 6,21
 """
-def celsius_para_fahrenheit(celsius):
-    return (1.8 * celsius) + 32
+def euro(valor):
+    vconvert = valor / 5.36
+    return float("{:.2f}".format(vconvert))
 
-def fahrenheit_para_celsius(fahrenheit):
-    return (fahrenheit - 32) / 1.8
+def libra(valor):
+    vconvert = valor / 6.21
+    return float("{:.2f}".format(vconvert))
 
-def exibir_menu():
-    print("\nEscolha uma opção:")
-    print("1. Converter Celsius para Fahrenheit")
-    print("2. Converter Fahrenheit para Celsius")
-    print("3. Sair")
+def dolarAME(valor):
+    vconvert = valor / 4.91
 
-def saida_menu():
-    while True:
-        exibir_menu()
-        opcao = input("Digite a opção desejada: ")
+    return float("{:.2f}".format(vconvert))
 
-        if opcao == '1':
-            celsius = float(input("Digite a temperatura em Celsius: "))
-            resultado = celsius_para_fahrenheit(celsius)
-            print(f"\n{celsius} graus Celsius é igual a {resultado:.2f} graus Fahrenheit.")
-        elif opcao == '2':
-            fahrenheit = float(input("Digite a temperatura em Fahrenheit: "))
-            resultado = fahrenheit_para_celsius(fahrenheit)
-            print(f"\n{fahrenheit} graus Fahrenheit é igual a {resultado:.2f} graus Celsius.")
-        elif opcao == '3':
-            print("\nSaindo do programa...")
-            quit()
-        else:
-            print("Opção inválida. Por favor, tente novamente.")
+def PesoARG(valor):
+    vconvert = valor / 0.02
+    return float("{:.2f}".format(vconvert))
 
-saida_menu()
+def dolarAUS(valor):
+    vconvert = valor / 3.18
+    return float("{:.2f}".format(vconvert))
+
+def dolarCAN(valor):
+    vconvert = valor / 3.64
+    return float("{:.2f}".format(vconvert))
+
+def francoSUI(valor):
+    vconvert = valor / 0.42
+    return float("{:.2f}".format(vconvert))
+
+val = float(input("Valores em reais para conversão: R$"))
+print (f"Valores Convertidos:")
+
+print (f"Valores Convertidos:\n Dolar Americano: ${dolarAME(val)}\nPeso Argentino: ${PesoARG(val)}\nDolar Australiano: ${dolarAUS(val)}\nDolar Canadense: $ {dolarCAN(val)}\nFranco Suiço: ${francoSUI(val)}\nEuro: ${euro(val)}\nLibra Esterlina {libra(val)}")
