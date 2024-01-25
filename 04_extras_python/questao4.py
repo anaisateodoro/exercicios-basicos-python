@@ -10,35 +10,36 @@ Euro: R$ 5,36
 Libra esterlina: R$ 6,21
 """
 def euro(valor):
-    vconvert = valor / 5.36
-    return float("{:.2f}".format(vconvert))
+    valor_converter = valor / 5.36
+    return float("{:.2f}".format(valor_converter))
 
 def libra(valor):
-    vconvert = valor / 6.21
-    return float("{:.2f}".format(vconvert))
+    valor_converter = valor / 6.21
+    return float("{:.2f}".format(valor_converter))
 
 def dolarAME(valor):
-    vconvert = valor / 4.91
+    valor_converter = valor / 4.91
 
-    return float("{:.2f}".format(vconvert))
+    return float("{:.2f}".format(valor_converter))
 
 def PesoARG(valor):
-    vconvert = valor / 0.02
-    return float("{:.2f}".format(vconvert))
+    valor_converter = valor / 0.02
+    return float("{:.2f}".format(valor_converter))
 
 def dolarAUS(valor):
-    vconvert = valor / 3.18
-    return float("{:.2f}".format(vconvert))
+    valor_converter = valor / 3.18
+    return float("{:.2f}".format(valor_converter))
 
 def dolarCAN(valor):
-    vconvert = valor / 3.64
-    return float("{:.2f}".format(vconvert))
+    valor_converter = valor / 3.64
+    return float("{:.2f}".format(valor_converter))
 
 def francoSUI(valor):
-    vconvert = valor / 0.42
-    return float("{:.2f}".format(vconvert))
+    valor_converter = valor / 0.42
+    return float("{:.2f}".format(valor_converter))
 
-val = float(input("Valores em reais para conversão: R$"))
-print (f"Valores Convertidos:")
-
-print (f"Valores Convertidos:\n Dolar Americano: ${dolarAME(val)}\nPeso Argentino: ${PesoARG(val)}\nDolar Australiano: ${dolarAUS(val)}\nDolar Canadense: $ {dolarCAN(val)}\nFranco Suiço: ${francoSUI(val)}\nEuro: ${euro(val)}\nLibra Esterlina {libra(val)}")
+val = float(input("\nValores em reais para conversão: R$"))
+print('***************************************************')
+print (f"Tabela de conversão:")
+print('*****************************')
+print (f"Dólar Americano: ${dolarAME(val)}\nPeso Argentino: ${PesoARG(val)}\nDolar Australiano: ${dolarAUS(val)}\nDólar Canadense: $ {dolarCAN(val)}\nFranco Suiço: ${francoSUI(val)}\nEuro: ${euro(val)}\nLibra Esterlina {libra(val)}")

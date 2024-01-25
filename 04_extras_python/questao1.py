@@ -1,11 +1,16 @@
 """1)Faça um programa, com uma função que necessite de três argumentos, 
 e que forneça a soma desses três argumentos."""
 
-print('\nTotal de Aulas assistidas - No Bootcamp WMC\n')
-def soma_aulas(sem1,sem2,sem3):
-    total_aulas = sem1 + sem2 + sem3
-    print(f'\nParabéns! Você assistiu até o momento {total_aulas} aulas.')
-sem1 = int(input('Digite a quantidade de aulas que você assistiu na primeira semana: '))
-sem2 = int(input('\nDigite a quantidade de aulas que você assistiu na segunda semana: '))
-sem3 = int(input('\nDigite a quantidade de aulas que você assistiu na terceira semana: '))
-soma_aulas(sem1, sem2, sem3)
+print('\nTotal de Episódios Assistidos - Séries de TV\n')
+
+def soma_episodios(stranger_things, vincenzo , the_good_fight ):
+    total_episodios = stranger_things + vincenzo  + the_good_fight 
+    print(f'\nParabéns! Você assistiu até o momento {total_episodios} episódios.')
+
+stranger_things = int(input('\nDigite a quantidade de episódios que você assistiu na série Stranger Things: '))
+vincenzo  = int(input('\nDigite a quantidade de episódios que você assistiu a série Vincenzo: '))
+the_good_fight  = int(input('\nDigite a quantidade de episódios que você assistiu na série The Good Fight: '))
+
+soma_episodios(stranger_things, vincenzo , the_good_fight )
+
+
