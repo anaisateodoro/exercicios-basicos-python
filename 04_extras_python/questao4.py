@@ -9,35 +9,37 @@ Franco Suiço: R$ 0,42
 Euro: R$ 5,36
 Libra esterlina: R$ 6,21
 """
-def celsius_para_fahrenheit(celsius):
-    return (1.8 * celsius) + 32
+def euro(valor):
+    valor_converter = valor / 5.36
+    return float("{:.2f}".format(valor_converter))
 
-def fahrenheit_para_celsius(fahrenheit):
-    return (fahrenheit - 32) / 1.8
+def libra(valor):
+    valor_converter = valor / 6.21
+    return float("{:.2f}".format(valor_converter))
 
-def exibir_menu():
-    print("\nEscolha uma opção:")
-    print("1. Converter Celsius para Fahrenheit")
-    print("2. Converter Fahrenheit para Celsius")
-    print("3. Sair")
+def dolarAME(valor):
+    valor_converter = valor / 4.91
 
-def saida_menu():
-    while True:
-        exibir_menu()
-        opcao = input("Digite a opção desejada: ")
+    return float("{:.2f}".format(valor_converter))
 
-        if opcao == '1':
-            celsius = float(input("Digite a temperatura em Celsius: "))
-            resultado = celsius_para_fahrenheit(celsius)
-            print(f"\n{celsius} graus Celsius é igual a {resultado:.2f} graus Fahrenheit.")
-        elif opcao == '2':
-            fahrenheit = float(input("Digite a temperatura em Fahrenheit: "))
-            resultado = fahrenheit_para_celsius(fahrenheit)
-            print(f"\n{fahrenheit} graus Fahrenheit é igual a {resultado:.2f} graus Celsius.")
-        elif opcao == '3':
-            print("\nSaindo do programa...")
-            quit()
-        else:
-            print("Opção inválida. Por favor, tente novamente.")
+def PesoARG(valor):
+    valor_converter = valor / 0.02
+    return float("{:.2f}".format(valor_converter))
 
-saida_menu()
+def dolarAUS(valor):
+    valor_converter = valor / 3.18
+    return float("{:.2f}".format(valor_converter))
+
+def dolarCAN(valor):
+    valor_converter = valor / 3.64
+    return float("{:.2f}".format(valor_converter))
+
+def francoSUI(valor):
+    valor_converter = valor / 0.42
+    return float("{:.2f}".format(valor_converter))
+
+val = float(input("\nValores em reais para conversão: R$"))
+print('***************************************************')
+print (f"Tabela de conversão:")
+print('*****************************')
+print (f"Dólar Americano: ${dolarAME(val)}\nPeso Argentino: ${PesoARG(val)}\nDolar Australiano: ${dolarAUS(val)}\nDólar Canadense: $ {dolarCAN(val)}\nFranco Suiço: ${francoSUI(val)}\nEuro: ${euro(val)}\nLibra Esterlina {libra(val)}")
