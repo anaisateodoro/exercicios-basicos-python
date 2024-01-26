@@ -25,7 +25,7 @@ perguntas =[
 # Preenche a lista com as respostas do usuário
 respostas = []
 for indice, pergunta in enumerate(perguntas):
-    resposta = input(f'{pergunta} S(Sim)| N(Não): ').lower()
+    resposta = input(f'{pergunta} Digite sim ou não: ').lower()
     respostas.insert(indice, resposta == 'sim')
 
 # Classificação 
